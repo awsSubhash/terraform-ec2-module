@@ -15,18 +15,27 @@ jobs:
       AWS_REGION: us-east-1
 
     steps:
+      # -----------------------
+      # CHECKOUT
+      # -----------------------
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # -----------------------
+      # SETUP TERRAFORM
+      # -----------------------
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
+      # -----------------------
+      # AWS AUTH (FIXED HERE ✅)
+      # -----------------------
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          region: ${{ env.AWS_REGION }}
+          aws-region: ${{ env.AWS_REGION }}
 
       # -----------------------
       # INIT
@@ -47,7 +56,7 @@ jobs:
         run: terraform validate
 
       # -----------------------
-      # PLAN (PR + PUSH)
+      # PLAN
       # -----------------------
       - name: Terraform Plan
         run: terraform plan -no-color
