@@ -29,11 +29,11 @@ variable "instance_name" {
 }
 
 variable "allowed_ssh_cidr" {
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
+  type    = list(string)
+  default = ["0.0.0.0/0"]
 }
 
 variable "allowed_jenkins_cidr" {
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
+  type    = list(string)
+  default = ["0.0.0.0/0"]
 }
