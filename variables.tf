@@ -28,6 +28,12 @@ variable "instance_name" {
   description = "EC2 Name"
 }
 
+variable "instance_count" {
+  type        = number
+  description = "Number of EC2 instances"
+  default     = 1
+}
+
 variable "allowed_ssh_cidr" {
   type    = list(string)
   default = ["0.0.0.0/0"]
