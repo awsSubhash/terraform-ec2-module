@@ -5,7 +5,7 @@ key_name      = "subhash-key"
 username   = "subhash"
 public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrjFOXEHv8XayVTBqgkHog2gt+TqXOwy5culmTK68Oa SYNAMEDIA+skumarsingh@LTskumars-0DB88"
 
-instance_name = "ec2-server"
+instance_name = "t3.micro"
 
 allowed_ssh_cidr     = ["0.0.0.0/0"]
 allowed_jenkins_cidr = ["0.0.0.0/0"]
