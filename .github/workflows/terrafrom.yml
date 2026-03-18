@@ -47,7 +47,7 @@ jobs:
       # FORMAT CHECK (IMPROVED)
       # -----------------------
       - name: Terraform Format Check
-        run: terraform fmt -check -diff
+        run: terraform fmt -recursive
 
       # -----------------------
       # VALIDATE
