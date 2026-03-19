@@ -1,5 +1,5 @@
 ami_id        = "ami-02dfbd4ff395f2a1b"
-instance_type = "c7i-flex.large"
+instance_type = "t3.micro"
 key_name      = "subhash-key"
 
 username   = "subhash"
